@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>converter</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #b88300, #999);
+    }
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<center>
+<body>
+    <div class="container my-5">
+        <h1>Unit Converter</h1>
+        <p>Put your value in the input box (Milimeters) and press your desired convertion</p>
+             <input type="text" id="id1">
+             <p id="finaltext"></p>
+             <button onclick="toCentimeters()">convert to centimeters</button>
+            <button onclick="toMeters()">convert to meters</button>
+             <button onclick="toKilometers()">convert to kilometers</button>
+    </div>
+    <script>
+        function toCentimeters() {
+            var x = document.getElementById('id1').value
+            var value = x / 10
+            document.getElementById('finaltext').innerHTML =  value + " centimer/s"
+        }
+        function toMeters() {
+            var x = document.getElementById('id1').value
+            var value = x / 1000
+            document.getElementById('finaltext').innerHTML =  value + " meter/s"
+        }
+        function toKilometers() {
+            var x = document.getElementById('id1').value
+            var value = x / 1e+6
+            document.getElementById('finaltext').innerHTML =  value + " kilometer/s"
+        }
+    </script>
+</body>
+</center>
+</html> 
